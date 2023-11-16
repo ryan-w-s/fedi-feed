@@ -21,6 +21,7 @@
    "scripts": {
       "start": "ts-node src/index.ts",
       "typeorm": "typeorm-ts-node-commonjs",
-      "get-auth": "ts-node get-auth.ts"
+      "get-auth": "ts-node get-auth.ts",
+      "fetch": "ts-node src/fetcher.ts"
    }
 }
