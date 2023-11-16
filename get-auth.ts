@@ -27,7 +27,8 @@ prompt.get(['serverUrl'], async function (err, result) {
     if (err) { return console.error(err) }
     const authorizationCode = result.authorizationCode as string
     const tokenData = await client.fetchAccessToken(clientId, clientSecret, authorizationCode)
-    fs.writeFile('tokenData.json', JSON.stringify(tokenData, null, 2), (err) => {
+    const extendedData = { ...tokenData, serverUrl }
+    fs.writeFile('tokenData.json', JSON.stringify(extendedData, null, 2), (err) => {
       if (err) throw err;
       console.log('Token data has been saved!');
     });
