@@ -31,6 +31,6 @@ prompt.get(['serverUrl'], async function (err, result) {
     fs.writeFile('tokenData.json', JSON.stringify(extendedData, null, 2), (err) => {
       if (err) throw err;
       console.log('Token data has been saved!');
-    });
+    })
   })
 })

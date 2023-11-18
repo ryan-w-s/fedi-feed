@@ -128,3 +128,7 @@ dist
 
 # my own
 tokenData.json
+data.json
+exampleOutput.json
+posts.json
+single-data.json
