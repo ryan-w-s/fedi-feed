@@ -27,7 +27,7 @@ AppDataSource.initialize().then(async () => {
 
     fs.writeFileSync('data.json', JSON.stringify(data, null, 2))
 
-    const posts = data.filter(post => !post.in_reply_to_id && !post.reblog)
+    const posts = data.filter(post => !post.in_reply_to_id)
         .map(post => {
             const actualPost = post.reblog || post
             const instanceDomain = new URL(actualPost.account.url).hostname

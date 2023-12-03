@@ -33,4 +33,7 @@ export class Post {
     @Index()
     @CreateDateColumn()
     created_at: Date
+
+    @Column({ type: 'boolean', default: false })
+    seen: boolean
 }
